@@ -11,9 +11,12 @@ Next backups
 Next time you want to backup your printer settings, you need to SSH into your pi and type:
 
 cd ~/klipper_config/
+
 git add .
+
 git commit -m "backup"
-got push -u origin master
+
+git push -u origin master
 
 Enter your GitHub credentials and you're done!
 
@@ -29,7 +32,9 @@ Restore with git
 If you need to completely restore your settings in the already existing local folder: 
 
 cd ~/klipper_config/
+
 git fetch -all
+
 git reset --hard origin/master
 
 !!WARNING!! This will delete all your settings in your printer folder and replace them with your backup. You will lose any change that was not backed up!
@@ -38,4 +43,5 @@ git reset --hard origin/master
 If you are starting from a new install and need to restore your settings from your previous setup:
 
 cd ~
-git clone <Your-GitHub-Repo-URL>
+
+git clone [Your-GitHub-Repo-URL]
