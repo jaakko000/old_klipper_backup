@@ -1,6 +1,7 @@
 # Klipper_backup
 Klipper backup for ender 3 v2
-Klipper just asennettu eikä mitään säätöjä sisässä. Endstopit ja perus testit ajettu.
+
+11.1.2023 modit: Capricorn, yellow springs, klipper, all-metal single gear extruder
 
 ---
 
