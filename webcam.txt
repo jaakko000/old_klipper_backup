@@ -1,8 +1,14 @@
 ### Windows users: To edit this file use Notepad++, VSCode, Atom or SublimeText.
 ### Do not use Notepad or WordPad.
-
 ### MacOSX users: If you use Textedit to edit this file make sure to use 
 ### "plain text format" and "disable smart quotes" in "Textedit > Preferences"
+
+
+
+
+
+
+##########################################################################################################
 
 ### Configure which camera to use
 #
@@ -21,7 +27,19 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1280x720 -f 30"    #camera_usb_options="-r 640x480 -f 10"
+camera_usb_options="-r 1280x720 -f 30"                                            #alkuperäset: camera_usb_options="-r 640x480 -f 10"
+
+##########################################################################################################
+
+
+
+
+
+
+
+
+
+
 
 ### Additional webcam devices known to cause problems with -f
 #
