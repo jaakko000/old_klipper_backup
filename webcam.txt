@@ -27,7 +27,7 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1280x720 -f 30"                                            #alkuperäset: camera_usb_options="-r 640x480 -f 10"
+camera_usb_options="-r 1280x720 -f 30 -d /dev/v4l/by-id/"usb-Microsoft_Microsoft®_LifeCam_Studio_TM_-video-index0""                                         #alkuperäset: camera_usb_options="-r 640x480 -f 10"
 
 ##########################################################################################################
 
@@ -66,7 +66,7 @@ camera_usb_options="-r 1280x720 -f 30"                                          
 #
 #
 #additional_brokenfps_usb_devices=()
-
+#
 ### Additional options to supply to MJPG Streamer for the RasPi Cam
 #
 # See https://faq.octoprint.org/mjpg-streamer-config for available options
@@ -74,7 +74,7 @@ camera_usb_options="-r 1280x720 -f 30"                                          
 # Defaults to 10fps
 #
 #camera_raspi_options="-fps 10"
-
+#
 ### Configuration of camera HTTP output
 #
 # Usually you should NOT need to change this at all! Only touch if you
@@ -87,8 +87,8 @@ camera_usb_options="-r 1280x720 -f 30"                                          
 # Current working directory is the mjpg-streamer base directory.
 #
 #camera_http_webroot="./www-fluidd"
-#camera_http_options="-n"
-
+camera_http_options="-n -p 8080" #esim camera_http_options="-n -p 8081" jos pitää saada useampi
+#
 ### EXPERIMENTAL
 # Support for different streamer types.
 #
