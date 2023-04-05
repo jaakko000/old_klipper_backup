@@ -4,6 +4,7 @@ port = 7125
 max_upload_size = 1024
 
 [file_manager]
+queue_gcode_uploads = True
 enable_object_processing = True
 
 [data_store]
@@ -61,4 +62,18 @@ env = ~/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 managed_services = KlipperScreen
+
+[power printer]
+type = homeassistant
+address = klipper.local
+port = 8123
+device = switch.smart_plug
+token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkNDNjYWU0M2IwYjA0OGYwODY2NGE2ZjFjNDM5OTliMyIsImlhdCI6MTY3OTUyNDY1OSwiZXhwIjoxOTk0ODg0NjU5fQ.kLlcxSKBP6bEyNc4AnuLD8P4u21y6xOeB8i_OOjXElE
+domain = switch
+restart_klipper_when_powered = True
+restart_delay = 3.
+on_when_job_queued = True
+
+[job_queue]
+load_on_startup = True
 
