@@ -12,7 +12,7 @@ temperature_store_size = 600
 gcode_store_size = 1000
 
 [authorization]
-force_logins = True
+force_logins = False
 cors_domains = 
 	*.local
 	*.lan
@@ -76,4 +76,14 @@ on_when_job_queued = True
 
 [job_queue]
 load_on_startup = True
+
+[update_manager moonraker-obico]
+type = git_repo
+path = ~/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/pi/moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	moonraker-obico
 
